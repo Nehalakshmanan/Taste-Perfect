@@ -2,7 +2,7 @@
 TastePerfect 🍔🍕
 TastePerfect is a dynamic Food Ordering Website built using React.js, HTML, CSS, and JavaScript, designed to provide a seamless and interactive experience for users to browse menus, customize orders, and place food orders effortlessly.
 
-Project Overview
+Project Overview:
 TastePerfect aims to revolutionize the food ordering process with an intuitive interface that enhances user experience through modern UI design and responsive layouts. The platform simplifies the food ordering journey, allowing users to explore a diverse range of menu items, select their favorite dishes, and place orders with ease.
 
 Features
