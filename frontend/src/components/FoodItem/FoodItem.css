@@ -1,5 +1,6 @@
 .food-item{
     width: 100%;
+    box-sizing: border-box;
     margin: auto;
     border-radius: 15px;
     box-shadow: 0px 0px 10px #00000015;
@@ -9,11 +10,18 @@
 
 .food-item-image{
     width: 100%;
-    border-radius: 15px 15px 0px 0px;
+  height: 200px; /* fixed height */
+  object-fit: cover;
+  border-radius: 15px 15px 0 0;
+ } 
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
 } 
 
 .food-item-info{
-    padding: 20px;
+    padding: 10px;
 }
 
 .food-item-name-rating{
@@ -63,6 +71,55 @@
     border-radius: 50px;
     background-color: white;
 }
-.food-item-counter img{ 
-    
+.food-item-counter img:hover{
+    transform: scale(1.05);
 }
+
+.food-item-counter img{ 
+    width: 20px;
+    cursor: pointer;
+}
+.food-display-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 10px;
+  box-sizing: border-box;
+  justify-content: center;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* Common card style */
+.food-item {
+  width: calc(25% - 20px);
+  min-height: 370px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Tablet view (3 per row) */
+@media (max-width: 992px) {
+  .food-item {
+    width: calc(33.33% - 20px);
+  }
+  .food-item-price{
+    font-size: 26px;
+  }
+}
+
+/* Mobile view (2 per row) */
+@media (max-width: 768px) {
+  .food-item {
+    width: calc(50% - 20px);
+    min-height: 320px;
+  }
+  .food-item-price{
+    font-size: 22px;
+  }
+  .food-item-desc{
+    display: none !important;
+  }
+}
+
